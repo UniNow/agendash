@@ -155,7 +155,7 @@
           <% if (job.repeatInterval) { %><p>Repeat each <%- job.repeatInterval %></p><% } %>
 
           <strong>Job data</strong>
-          <% if (job.data.output && !job.output) {
+          <% if (job.data.output && job.data && !job.output) {
             job.output = job.data.output;
             delete job.data.output;
           } %>
