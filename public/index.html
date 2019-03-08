@@ -155,10 +155,6 @@
           <% if (job.repeatInterval) { %><p>Repeat each <%- job.repeatInterval %></p><% } %>
 
           <strong>Job data</strong>
-          <% if (job.data && job.data.output && !job.output) {
-            job.output = job.data.output;
-            delete job.data.output;
-          } %>
           <pre><%- JSON.stringify(job.data || {}, null, 2) %></pre>
           <% if (failed) { %>
             <strong>Failure reason</strong>
